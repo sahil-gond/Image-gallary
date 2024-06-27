@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* border: 2px solid red; */
+}
+
+body{
+  line-height: 1.4;
+}
+#header{
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 30vh;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+h1{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 50px;
+  color: #fff;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+#search-input{
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #fff;
+  background-color: transparent;
+}
+form ::placeholder{
+  color: #fff;
+}
+#search-button{
+  padding: 10px 20px;
+  background-color:transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.search-result{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.search-result-box{
+  margin-top: 30px;
+  margin-bottom: 60px;
+  width: 30%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+.search-result-box img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease-in-out;
+}
+.search-result-box:hover img{
+  opacity: 0.8;
+}
+.search-result-box a{
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  text-transform: capitalize;
+}
+#show-more-button{
+  background-color: blue;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: block;
+  margin: 30px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 760px){
+  .search-result{
+    padding: 20px;
+  }
+  .search-result-box {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 480px){
+  .search-result-box {
+    width: 100%;
+  }
+}
+
+
