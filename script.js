@@ -14,13 +14,13 @@ async function searchImages(){
   const response = await fetch(url);
   const data = await response.json();
 
-  const results = data.results;
+  const result = data.results; 
 
   if (page === 1){
     searchResult.innerHTML = "";
   }
 
-  results.map((result) => {
+  result.map((result) => {
     const imageWrapper = document.createElement('div');
     imageWrapper.classList.add("search-result-box")
     const image = document.createElement('img')
